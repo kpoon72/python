@@ -10,10 +10,12 @@ import math
 1.  Write a program to input a number and check whether a number is an integer or not
     hint: you can use isnumeric() function
 '''
-
 # Answer
-num = int(input("Enter any number : \n"))
-print(type(num))
+num = input("Enter any number : \t")
+if num.isnumeric():
+    print(f"{num} is an Integer")
+else:
+    print(f"'{num}' is not an Integer")
 
 
 '''
@@ -28,7 +30,14 @@ num = [1, 5, 2, 89, 32, 112, 167, 333, 20, 5, 23]
 odd_num = []
 even_num=[]
 # Answer
+for i in num:
+    if i % 2 == 0:
+        even_num.append(i)
+    else:
+        odd_num.append(i)
 
+print(f"Odd numbers: {odd_num}")
+print(f"Even numbers: {even_num}")
 
 
 '''
@@ -46,6 +55,27 @@ Hannah is a palindrome word
 ________________________________________________________________________
 '''
 # answer here
+word1=input("Enter a  first word to check if it is Palindrome or not : \t ")
+word2=input("Enter a  second word to check if it is Palindrome or not : \t ")
+word_list=[word1.lower(),word2.lower()]
+
+for word in word_list:
+    if word == word[::-1]:
+        print(f"{word} is a palindrome word.")
+    else:
+        print(f"{word} is not a palindrome word.")
+
+'''
+word1=input("Enter a  first word to check if it is Palindrome or not : \t ")
+#word2=word1[::-1]  ## Alternative Way
+#if word1.lower() == word2.lower(): ## Alternative way
+if word1.lower() == word1.lower()[::-1]:
+
+    print(f"{word1} is a palindrome word.")
+else:
+    print(f"{word1} is not a palindrome word.")
+
+'''
 
 
 '''
@@ -59,7 +89,13 @@ ________________________________________________________________________
 '''
 a = 1
 b = 1
+count =0 
+
 # answer here
+while count < 20:
+
+      count +=1
+
 
 
 
